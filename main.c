@@ -5,7 +5,7 @@
 int main (void){
 	int c;
 	c=0;
-	while (c <=99999999999999999999999999){	
+	while (c < 100){	
 	printf("%d\n", c);
 	c = c+1;
 }
