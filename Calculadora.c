@@ -5,8 +5,8 @@
 void main(){
 	float divnum1;
 	float divnum2;
-	double num1;
-	double num2;
+	int num1;
+	int num2;
 	int opcao;
 	setlocale(LC_ALL,("Portuguese"));
 	printf("===================================\nCalculadora para operações simples!\n===================================\n");
@@ -55,17 +55,17 @@ void main(){
 				break;
 			case 4:
 				printf("Quais números você deseja multiplicar?\n");
-				scanf("%f", &divnum1);
+				scanf("%d", &num1);
 				fflush(stdin);
-				scanf("%f", &divnum2);
+				scanf("%d", &num2);
 				fflush(stdin);
-				printf("O resultado é:\n%f\n", divnum1 * divnum2);
+				printf("O resultado é:\n%d\n", num1 * num2);
 				system("pause");
 				system("cls");
 				break;
 			case 5:
 				printf("Instruções de utilização da calculadora:\n\n");
-				printf("A utilização da calcladora se dá de maneira simples.\n\n O usuário seleciona a opção desejada no menu inicial da calculadora, dentro da operação, você irá digitar o primeiro\n número sem qualquer sinal de operção e pressionar enter, em seguida, inserir o segundo número e pressionar enter,\n então, o resultado será exibido.\n\n\n");
+				printf("A utilização da calcladora se dá de maneira simples.\n\n O usuário seleciona a opção desejada no menu inicial da calculadora, dentro da operação, você irá digitar o primeiro\n número sem qualquer sinal de operção e pressionar enter, em seguida, inserir o segundo número e pressionar enter,\n então, o resultado será exibido.\n\n\nObs: Todas as operações, exceto divisão, aceitam apenas números inteiros.\n\n");
 				system ("pause");
 				system("cls");
 				break;
@@ -75,6 +75,7 @@ void main(){
 				break;
 				default:
 					("Comando inválido!");
+					break;
 						}
 	}while (opcao < 6);
 }
